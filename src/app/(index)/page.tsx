@@ -1,7 +1,9 @@
-
+import Sort from "@/components/Sort"
 
 export default function Page(){
     return (
-        <div>Hello Page.</div>
+        <div className="container">
+            <Sort />
+        </div>
     )
 }
