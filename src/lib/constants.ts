@@ -30,3 +30,10 @@ export const SortList = [
         "text": "Price: High -&gt Low"
     }
 ]
+
+export const NavList = [
+    {
+        "title": "Categories",
+        "list": ["Clothing", "Audio", "Furniture"]
+    }
+]

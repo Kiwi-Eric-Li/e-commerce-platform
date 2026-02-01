@@ -1,7 +1,7 @@
 import Link from "next/link"
 import {Separator} from '@/components/ui/separator'
 
-import {Title} from "@/lib/constants"
+import {Title, NavList} from "@/lib/constants"
 
 export default async function Footer(){
     return (
@@ -11,14 +11,20 @@ export default async function Footer(){
                     <Link href="/">{Title}</Link>
                 </h2>
                 <div className="grid-cols-3 gap-10 flex">
-                    <div>
-                        <span>Categories</span>
-                        <ul className="m-4 space-y-3">
-                            <li>Clothing</li>
-                            <li>Audio</li>
-                            <li>Furniture</li>
-                        </ul>
-                    </div>
+                    {
+                        NavList.map((navItem, index) => {
+                            return (
+                                <div key={index}>
+                                    <span>{navItem.title}</span>
+                                    <ul className="m-4 space-y-3">
+                                        {navItem.list.map((item) => (
+                                            <li key={item}>{item}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )
+                        })
+                    }
                     <Separator orientation="vertical"/>
                     <div>
                         <span>Categories</span>
