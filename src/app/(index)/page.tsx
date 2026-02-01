@@ -1,9 +1,11 @@
 import Sort from "@/components/Sort"
+import Products from "@/components/Product"
 
-export default function Page(){
+export default async function Page(){
     return (
-        <div className="container">
+        <div className="container flex py-6">
             <Sort />
+            <Products />
         </div>
     )
 }

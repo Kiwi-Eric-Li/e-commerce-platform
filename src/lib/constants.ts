@@ -1,4 +1,5 @@
 export const Title = "E-Commerce Store"
+export const ProductsTitle = "All Products"
 
 export const MenuList = [
     {
